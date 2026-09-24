@@ -1,0 +1,3 @@
+import type { Room } from "@/types/room";
+
+export const AmenitiesGrid = ({ amenities }: Pick<Room, "amenities">) => <section className="border-b border-[#eeeeee] py-7" aria-labelledby="amenities-title"><h2 id="amenities-title" className="text-xl font-bold">Lo que ofrece este alojamiento</h2><div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">{amenities.map((amenity) => <div className="flex items-center gap-4 text-sm" key={amenity.label}><span className="flex h-8 w-8 items-center justify-center text-xl text-[#555555]">{amenity.icon}</span><span>{amenity.label}</span></div>)}</div></section>;
